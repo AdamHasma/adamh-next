@@ -1,26 +1,448 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Agrandir Variable";
+  src: url("../assets/fonts/Agrandir Variable.ttf");
+  font-weight: 100 900;
+  font-stretch: 50% 200%;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+/* stacked animation of opacity and moving from top to bottom */
+@keyframes slide-in {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
   }
-  body {
-    color: white;
-    background: black;
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-out {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+/* looping font weight and font stretch animation */
+@keyframes font-weight-stretch {
+  0% {
+    font-weight: 100;
+    font-stretch: 100%;
+    letter-spacing: 0.1em;
+  }
+  50% {
+    font-weight: 900;
+    font-stretch: 200%;
+    letter-spacing: 0;
+  }
+  100% {
+    font-weight: 100;
+    font-stretch: 100%;
+    letter-spacing: 0.1em;
+  }
+}
+
+/* reverse slide-out */
+
+html {
+  box-sizing: border-box;
+  font-feature-settings: "ss01" on, "ss05" on;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.condensed {
+  font-stretch: condensed;
+}
+
+.semi-condensed {
+  font-stretch: semi-condensed;
+}
+
+.grand {
+  font-stretch: ultra-expanded;
+}
+
+.big-glow:hover {
+  text-shadow: 0 0 65px hsla(105, 97%, 62%, 0.5);
+}
+
+.big-glow-2 {
+  text-shadow: 0 0 65px hsla(0, 0%, 100%, 1);
+}
+
+.big-glow-icon {
+  box-shadow: 0 0 65px hsla(105, 97%, 62%, 0.5);
+}
+
+iframe {
+  height: calc(100vw / 2.44);
+  max-width: 100%;
+}
+
+.bg-transparent {
+  background-color: transparent;
+}
+
+.mobile-image-container::before {
+  /* gradient overlay on each top and bottom side with 25% */
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 35%;
+  background: linear-gradient(0deg, #191d2000 0%, #191d20 100%);
+  z-index: 4;
+  pointer-events: none;
+}
+
+.mobile-image-container::after {
+  /* gradient overlay on each top and bottom side with 25% */
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 35%;
+  background: linear-gradient(0deg, #191d20 0%, #191d2000 100%);
+  z-index: 4;
+  pointer-events: none;
+}
+
+.gradient::before {
+  content: "";
+  background: linear-gradient(90deg, #191d2000 0%, #191d20 100%);
+  position: absolute;
+  z-index: 1;
+  pointer-events: none;
+  width: 33%;
+  height: 250px;
+  right: 0;
+}
+
+::placeholder {
+  text-align: center;
+}
+
+/* input[type="text"]:focus {
+  border-bottom: 1px solid #6dfc3f;
+} */
+
+textarea {
+  word-break: break-all;
+  height: auto;
+}
+
+/* background noise */
+.layout::before {
+  content: "";
+  position: fixed;
+  overflow: hidden;
+  left: -10rem;
+  z-index: 9999;
+  top: -10rem;
+  width: calc(100% + 20rem);
+  height: calc(100% + 20rem);
+  background-image: url(../assets/images/noise.png);
+  opacity: 1;
+  pointer-events: none;
+  animation: noise 1s steps(2) infinite;
+}
+
+@-webkit-keyframes noise {
+  to {
+    transform: translate3d(-7rem, 0, 0);
+  }
+}
+
+@keyframes noise {
+  0% {
+    transform: translate3d(0, 9rem, 0);
+  }
+
+  10% {
+    transform: translate3d(-1rem, -4rem, 0);
+  }
+
+  20% {
+    transform: translate3d(-8rem, 2rem, 0);
+  }
+
+  30% {
+    transform: translate3d(9rem, -9rem, 0);
+  }
+
+  40% {
+    transform: translate3d(-2rem, 7rem, 0);
+  }
+
+  50% {
+    transform: translate3d(-9rem, -4rem, 0);
+  }
+
+  60% {
+    transform: translate3d(2rem, 6rem, 0);
+  }
+
+  70% {
+    transform: translate3d(7rem, -8rem, 0);
+  }
+
+  80% {
+    transform: translate3d(-9rem, 1rem, 0);
+  }
+
+  90% {
+    transform: translate3d(6rem, -5rem, 0);
+  }
+
+  to {
+    transform: translate3d(-7rem, 0, 0);
+  }
+}
+
+body > div > div div .hover-text:hover {
+  opacity: 1 !important;
+}
+
+.hover-text:before {
+  /* create a thin line and let it expand from the center to left and right */
+  content: "";
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  width: 0;
+  height: 4px;
+  background: #fff;
+  z-index: 1;
+  transition: all 0.5s ease-in-out;
+}
+
+/* let it now expand */
+.hover-text:hover:before {
+  width: 100%;
+  left: 0;
+}
+
+.projects-mobile a::before {
+  content: none;
+}
+
+.slide-text {
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-feature-settings: "ss01" on, "ss05" on;
+  font-weight: 550;
+  text-shadow: 0px 3px 3px #191d20;
+}
+
+.mobile-image-container > .swiper {
+  width: 100%;
+}
+
+nav a::before,
+a.link::before {
+  /* when hovered, animate a bottom line that expands from the center to full width */
+  content: "";
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  background: #6dfc3f;
+  z-index: 1;
+  transform: scaleX(0);
+  transition: all 0.3s ease-in-out;
+}
+
+nav a:hover::before {
+  transform: scaleX(1);
+}
+
+nav div div a {
+  width: fit-content;
+}
+
+nav > a:first-child::before {
+  width: 0;
+}
+
+nav a {
+  position: relative;
+}
+
+/* animate .projectlist > a */
+.projectlist > a:nth-child(1) {
+  animation: slide-in 0.3s ease-in-out;
+}
+.projectlist > a:nth-child(2) {
+  animation: slide-in 0.5s ease-in-out;
+}
+.projectlist > a:nth-child(3) {
+  animation: slide-in 0.7s ease-in-out;
+}
+
+/* animate .projects-mobile>* */
+.projects-mobile > a:nth-child(1) {
+  animation: slide-out 0.3s ease-in-out;
+}
+.projects-mobile > a:nth-child(2) {
+  animation: slide-out 0.5s ease-in-out;
+}
+.projects-mobile > a:nth-child(3) {
+  animation: slide-out 0.7s ease-in-out;
+}
+
+.projectlist > a {
+  text-shadow: -2px 2px 0px #191d20;
+}
+
+.gradientProject {
+  background: linear-gradient(to bottom, #191d20, hsla(206, 12%, 11%, 0.496));
+}
+
+.shadow-nav-glow {
+  box-shadow: 0px 0px 32px 8px #191d20b9;
+}
+
+.hidden-i {
+  display: none !important;
+}
+
+.svg-eye svg * {
+  transition: all 0.3s linear;
+}
+
+/* media max 1920 width */
+@media screen and (max-width: 1920px) {
+  .landing-title {
+    font-size: 3.25rem;
+  }
+  .landing-image {
+    height: 350px;
+  }
+}
+
+/* media max 1600 width */
+@media screen and (max-width: 1600px) {
+  .landing-title {
+    font-size: 3rem;
+  }
+  .landing-image {
+    height: 280px;
+  }
+}
+
+/* media max 1440 width */
+@media screen and (max-width: 1440px) {
+}
+
+/* media max 1199 */
+@media screen and (max-width: 1199px) {
+  .landing-title {
+    animation: font-weight-stretch 10s infinite linear;
+  }
+}
+
+/* media max 767 width */
+@media screen and (max-width: 768px) {
+  body header.mobile-nav {
+    position: fixed;
+    display: block;
+  }
+  body header.mobile-nav .logo {
+    display: none;
+  }
+  body header.mobile-nav nav {
+    display: flex;
+    flex-direction: column;
+    margin: 0 2.5rem;
+  }
+  body header.mobile-nav nav > div.bar {
+    width: 100%;
+    margin: 0 2.25rem;
+    background: #edf5fa;
+    border: none;
+    color: #191d20;
+  }
+  .projects-mobile > * {
+    margin: 0.5rem 0 0;
+    background-color: #191d20;
+    color: #6dfc3f;
+    border: 2px solid #edf5fa;
+    padding: 0.5rem 0;
+    padding-bottom: 0.25rem;
+    width: 100%;
+    font-size: 1.5rem;
+    font-stretch: ultra-expanded;
+    font-weight: 600;
+    text-align: center;
+    border-radius: 0.75rem;
+    animation-fill-mode: both;
+  }
+
+  .projects-mobile {
+    width: 100%;
+    margin: 0 2rem;
+  }
+
+  /* apply font-weight-stretch animation on .landing-title */
+}
+
+/* media max 480 width */
+@media screen and (max-width: 480px) {
+  .text-lg {
+    font-size: 1.25rem;
+  }
+  .text-xl {
+    font-size: 1.5rem;
+  }
+  .text-2xl {
+    font-size: 2rem;
+  }
+  body header.mobile-nav nav > div.bar {
+    margin: 0rem;
+    width: 100%;
+  }
+  body header.mobile-nav nav {
+    width: calc(100% - 40px);
+    margin: auto;
+  }
+  .landing-title {
+    font-size: 2rem;
   }
 }
