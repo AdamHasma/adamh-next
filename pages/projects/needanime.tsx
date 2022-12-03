@@ -36,7 +36,7 @@ const resetText = (e: any) => {
 
 function Needanime() {
   return (
-    <Layout>
+    <Layout title="Needani.me">
       <div className="col-span-8 min-h-[100vh]">
         <div className="absolute z-10 left-0 top-0 right-0 h-[520px] mt-[-2.5rem] mb-0 xs-max:h-[320px]">
           {/* image overlay from top to bottom black */}

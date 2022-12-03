@@ -94,8 +94,7 @@ const IndexPage = () => {
   };
 
   return (
-    <Layout title="Adam H. | Home">
-      <div className="layout"></div>
+    <Layout title="Home">
       <div className="mobile-image-container mx-[-1.25rem] sm:mx-[-2.5rem] h-[82vh] relative top-[-8vh] col-span-full hidden xs-max:flex">
         <Swiper
           grabCursor={true}

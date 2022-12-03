@@ -4,7 +4,7 @@ const Layout = dynamic(() => import("../components/Layout"), { ssr: false });
 
 function PrivacyPolicy() {
   return (
-    <Layout>
+    <Layout title="Privacy Policy">
       <style>
         {`
           h2, h3, h4, h5, h6 {

@@ -22,9 +22,11 @@ const Layout = ({ children, title = "This is the default title" }: Props) => {
 
   return (
     <div className="bg-primary w-full min-h-screen flex justify-center xxs-max:p-5 p-10 pb-5">
+      <div className="layout"></div>
+
       <div className="text-secondary  font-agrandir  grid grid-flow-row auto-rows-max max-w-[1400px] grid-cols-8 gap-5 content-between w-full">
         <Head>
-          <title>{title}</title>
+          <title>{"Adam H. | " + title}</title>
           <meta charSet="utf-8" />
           <meta
             name="viewport"

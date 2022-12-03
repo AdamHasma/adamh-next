@@ -3,7 +3,7 @@ import Layout from "../components/Layout";
 
 function LegalNotice() {
   return (
-    <Layout>
+    <Layout title="Legal Notice">
       <div className="col-span-full impressum">
         <h1 className="text-2xl">Legal notice</h1>
         <p>Information according to § 5 TMG</p>

@@ -98,7 +98,7 @@ function About() {
   });
 
   return (
-    <Layout title="About Me">
+    <Layout title="About">
       <div className="col-span-8 min-h-[90vh] grid grid-flow-row auto-rows-max grid-cols-8 gap-5 xs-max:mt-8 x my-24">
         <div className="sm-max:col-span-4 sm:col-span-3 sm-max:col-start-1 sm:col-start-2 s-max:col-span-full">
           <h2 className="text-xl font-bold grand">Peace be upon you</h2>
