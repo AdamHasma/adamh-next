@@ -119,6 +119,7 @@ const IndexPage = () => {
               objectFit="cover"
               src={mnmalPic}
               alt="needani.me"
+              priority
             />
             {/* title that is in the center with absolute */}
             <div className="absolute flex-col pointer-events-none top-0 bottom-0 left-0 right-0 flex justify-center items-center">
@@ -145,6 +146,7 @@ const IndexPage = () => {
               objectFit="cover"
               src={needanimeMobile}
               alt="needani.me"
+              priority
             />
             {/* title that is in the center with absolute */}
             <div className="absolute pointer-events-none top-0 bottom-0 left-0 right-0 flex justify-center items-center">
@@ -161,6 +163,7 @@ const IndexPage = () => {
               objectFit="cover"
               src={selvportraitPic}
               alt="needani.me"
+              priority
             />
             {/* title that is in the center with absolute */}
             <div className="absolute pointer-events-none top-0 bottom-0 left-0 right-0 flex justify-center items-center">
