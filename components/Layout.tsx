@@ -97,7 +97,7 @@ const Layout = ({ children, title = "This is the default title" }: Props) => {
                   <Link href="/projects/needanime">
                     <a>NEEDANI.ME</a>
                   </Link>
-                  <Link href="/projects/selvportrait">
+                  <Link href="/projects/Selvportrait">
                     <a>SELVPORTRAIT</a>
                   </Link>
                 </div>

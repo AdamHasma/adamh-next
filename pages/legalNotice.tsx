@@ -1,7 +1,7 @@
 import React from "react";
 import Layout from "../components/Layout";
 
-function legalNotice() {
+function LegalNotice() {
   return (
     <Layout>
       <div className="col-span-full impressum">
@@ -31,4 +31,4 @@ function legalNotice() {
   );
 }
 
-export default legalNotice;
+export default LegalNotice;

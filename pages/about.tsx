@@ -65,7 +65,7 @@ const cvData = [
   },
 ];
 
-function about() {
+function About() {
   const [language, setLanguage] = useState<boolean>(true);
 
   // handle change of the input field, increase the width of the input field based on the value with "ch" unit
@@ -361,4 +361,4 @@ function about() {
   );
 }
 
-export default about;
+export default About;

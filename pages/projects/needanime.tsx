@@ -34,7 +34,7 @@ const resetText = (e: any) => {
   e.target.style.transform = `translate(0px, 0px)`;
 };
 
-function needanime() {
+function Needanime() {
   return (
     <Layout>
       <div className="col-span-8 min-h-[100vh]">
@@ -204,4 +204,4 @@ function needanime() {
   );
 }
 
-export default needanime;
+export default Needanime;

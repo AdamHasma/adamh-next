@@ -33,7 +33,7 @@ const resetText = (e: any) => {
   e.target.style.transform = `translate(0px, 0px)`;
 };
 
-function selvportrait() {
+function Selvportrait() {
   return (
     <Layout>
       <div className="col-span-8 min-h-[100vh]">
@@ -191,4 +191,4 @@ function selvportrait() {
   );
 }
 
-export default selvportrait;
+export default Selvportrait;

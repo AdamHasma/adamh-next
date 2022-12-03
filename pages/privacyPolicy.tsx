@@ -2,7 +2,7 @@ import React from "react";
 import dynamic from "next/dynamic";
 const Layout = dynamic(() => import("../components/Layout"), { ssr: false });
 
-function privacyPolicy() {
+function PrivacyPolicy() {
   return (
     <Layout>
       <style>
@@ -366,4 +366,4 @@ function privacyPolicy() {
   );
 }
 
-export default privacyPolicy;
+export default PrivacyPolicy;

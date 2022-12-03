@@ -38,7 +38,7 @@ const resetText = (e: any) => {
   e.target.style.transform = `translate(0px, 0px)`;
 };
 
-function mnmal() {
+function Mnmal() {
   return (
     <Layout>
       <div className="col-span-8 min-h-[100vh]">
@@ -244,4 +244,4 @@ function mnmal() {
   );
 }
 
-export default mnmal;
+export default Mnmal;
