@@ -57,8 +57,8 @@ function PrivacyPolicy() {
         <p>
           Data processing on this website is carried out by the website
           operator. You can find the contact details of the website operator in
-          the section "Information about the responsible party" in this data
-          protection declaration.
+          the section &quot;Information about the responsible party&quot; in
+          this data protection declaration.
         </p>{" "}
         <h4>How do I capture your data?</h4>{" "}
         <p>
@@ -108,8 +108,8 @@ function PrivacyPolicy() {
           been requested, the processing is carried out exclusively on the basis
           of Art. 6 para. 1 lit. a DSGVO and § 25 para. 1 TTDSG, insofar as the
           consent includes the storage of cookies or access to information in
-          the user's terminal device (e.g. device fingerprinting) as defined by
-          the TTDSG. The consent can be revoked at any time.
+          the user&quot;s terminal device (e.g. device fingerprinting) as
+          defined by the TTDSG. The consent can be revoked at any time.
         </p>{" "}
         <p>
           My hoster(s) will only process your data to the extent necessary to
@@ -301,8 +301,8 @@ function PrivacyPolicy() {
           protect the transmission of confidential content, such as orders or
           requests that you send to me as the site operator. You can recognize
           an encrypted connection by the fact that the address line of the
-          browser changes from "http://" to "https://" and by the lock symbol in
-          your browser line.
+          browser changes from &quot;http://&quot; to &quot;https://&quot; and
+          by the lock symbol in your browser line.
         </p>{" "}
         <p>
           If SSL or TLS encryption is activated, the data you transmit to me

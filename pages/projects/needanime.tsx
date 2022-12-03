@@ -160,6 +160,7 @@ function Needanime() {
             <div className="col-span-full flex justify-center mt-6">
               <a
                 target={"_blank"}
+                rel="noreferrer"
                 href="https://needani.me"
                 className=" w-fit uppercase text-[20px] font-semibold bg-secondary
                 leading-none text-primary rounded-default tracking-wider px-6

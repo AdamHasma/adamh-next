@@ -120,8 +120,8 @@ function Mnmal() {
               small projects where something was always missing, be it the logo,
               website, development. This was the first time I had set out to do
               everything since I taught myself to program and there were nothing
-              left I could’n't do. Only the 3D bike is not my work. I put it in
-              Blender and rendered it in mutliple perspectives.
+              left I could’n&quot;t do. Only the 3D bike is not my work. I put
+              it in Blender and rendered it in mutliple perspectives.
             </p>
           </div>
           <div className="mt-12 grid grid-flow-row auto-rows-max grid-cols-4 gap-5 col-span-full ">
@@ -200,6 +200,7 @@ function Mnmal() {
             <div className="col-span-full flex justify-center mt-6">
               <a
                 target={"_blank"}
+                rel="noreferrer"
                 href="https://mnmal.superhi.com"
                 className=" w-fit uppercase text-[20px] font-semibold bg-secondary
                 leading-none text-primary rounded-default tracking-wider px-6

@@ -104,8 +104,8 @@ function About() {
           <h2 className="text-xl font-bold grand">Peace be upon you</h2>
           <p>
             My name is Adam Hasmagomadov and I currently live in Hanover,
-            Germany. I'm 25 years old, and I'm designing since 6 years and
-            coding since 3 years now. In the bib college Hannover I have
+            Germany. I&apos;m 25 years old, and I&apos;m designing since 6 years
+            and coding since 3 years now. In the bib college Hannover I have
             completed my apprenticeship as a media designer specialized in print
             and web. Besides Design and Coding, I also like cats, even when they
             always sit on my keyboard.
@@ -118,9 +118,10 @@ function About() {
           </h3>
           <p>
             User Experiecne Design is one of the two main focuses of my work. In
-            my opinion, UX is the most important part of a product. It doesn't
-            matter how pretty the design is, if the user doesn't understand how
-            to use it. I always try to make my designs as intuitive as possible.
+            my opinion, UX is the most important part of a product. It
+            doesn&apos;t matter how pretty the design is, if the user
+            doesn&apos;t understand how to use it. I always try to make my
+            designs as intuitive as possible.
           </p>
           <h3 className="text-lg font-medium mt-6 semi-condensed uppercase">
             <span className="mr-2">
@@ -129,10 +130,10 @@ function About() {
             Web Development
           </h3>
           <p>
-            It started by telling myself "I need to know the basics of web
-            development". I never wanted to be a web developer. I hated it. But
-            I realized that the code influences the user experience by a lot.
-            That's why I'm doing both, design and coding.
+            It started by telling myself &quot;I need to know the basics of web
+            development&quot;. I never wanted to be a web developer. I hated it.
+            But I realized that the code influences the user experience by a
+            lot. That&apos;s why I&apos;m doing both, design and coding.
             <span className=" italic block mt-2">
               To create the best possible user experience.
             </span>
