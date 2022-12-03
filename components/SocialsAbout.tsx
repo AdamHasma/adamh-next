@@ -20,7 +20,10 @@ function SocialsAbout({ icon, link }: { icon: React.FC; link: string }) {
       onMouseLeave={() => setHover(!hover)}
     >
       <span>
-        <Icon fill={hover ? "#191d20" : "#6dfc3f"} />
+        {
+          // @ts-ignore
+          <Icon fill={hover ? "#191d20" : "#6dfc3f"} />
+        }
       </span>
       <style>
         {`
