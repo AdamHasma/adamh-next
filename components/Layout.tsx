@@ -36,7 +36,7 @@ const Layout = ({ children, title = "This is the default title" }: Props) => {
         <header className="col-span-8 grid grid-flow-row auto-rows-max grid-cols-8 gap-5 sticky xs-max:bottom-10 xs-max:top-[unset] top-10 right-0 left-0 z-20 max-w-[1400px] w-auto mobile-nav">
           <nav className="col-span-8 grid auto-rows-max grid-cols-8 gap-5 items-center ">
             <Link href="/">
-              <div className="w-fit leading-[0] p-4 shadow-nav-glow bg-primary rounded-xl border-opacity-25 border border-secondary logo cursor-pointer before:content-none">
+              <div className="w-fit t leading-[0] p-4 shadow-nav-glow bg-primary rounded-xl border-opacity-25 border border-secondary logo cursor-pointer before:content-none">
                 <Image
                   className="block"
                   width={144}
