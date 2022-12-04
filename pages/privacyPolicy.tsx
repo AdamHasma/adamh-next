@@ -311,11 +311,12 @@ function PrivacyPolicy() {
         <h2 className="text-xl">4. data collection on this website</h2>
         <h3 className="text-lg">Contact form</h3>{" "}
         <p>
-          Wenn Sie uns per Kontaktformular Anfragen zukommen lassen, werden Ihre
-          Angaben aus dem Anfrageformular inklusive der von Ihnen dort
-          angegebenen Kontaktdaten zwecks Bearbeitung der Anfrage und f&uuml;r
-          den Fall von Anschlussfragen bei uns gespeichert. Diese Daten geben
-          wir nicht ohne Ihre Einwilligung weiter.
+          If you send us inquiries via the contact form, your data from the
+          form, including the contact data you provide there, will be used for
+          the contact data provided by you will be stored by us for the purpose
+          of processing the inquiry and in the event of follow-up questions. in
+          the event of follow-up questions. We do not pass on this data without
+          your consent.
         </p>{" "}
         <p>
           The processing of this data is based on Art. 6 (1) lit. b DSGVO, if
