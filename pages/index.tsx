@@ -4,7 +4,7 @@ import Image from "next/image";
 import dynamic from "next/dynamic";
 const ReactPlayer = dynamic(() => import("react-player/lazy"), { ssr: false });
 
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -70,6 +70,9 @@ const IndexPage = () => {
   // state of the projectInfo
   const [projectInfo, setProjectInfo] = useState(projectData[3]);
 
+  // ref on ".shadow-big-glow video"
+  const swipeVideo = useRef<HTMLVideoElement | null>(null);
+
   // set projectInfo handler
   const handleProjectInfo = (name: string) => {
     // find index of the project
@@ -92,6 +95,12 @@ const IndexPage = () => {
   const resetText = (e: any) => {
     e.target.style.transform = `translate(0px, 0px)`;
   };
+
+  useEffect(() => {
+    if (swipeVideo.current) {
+      swipeVideo.current.play();
+    }
+  }, []);
 
   return (
     <Layout title="Home">
@@ -128,12 +137,15 @@ const IndexPage = () => {
                 needs...
                 <div className="mt-4">
                   <video
+                    ref={swipeVideo}
                     className="m-auto relative right-2"
                     controls={false}
                     autoPlay={true}
                     loop={true}
                     muted={true}
                     playsInline={true}
+                    preload="auto"
+                    typeof="video/mp4"
                     src={require("../public/swipe.mp4").default}
                   />
                 </div>
