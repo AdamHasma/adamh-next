@@ -133,6 +133,7 @@ const IndexPage = () => {
                     autoPlay={true}
                     loop={true}
                     muted={true}
+                    playsInline={true}
                     src={require("../public/swipe.mp4").default}
                   />
                 </div>
