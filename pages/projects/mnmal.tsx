@@ -46,6 +46,7 @@ function Mnmal() {
           {/* image overlay from top to bottom black */}
           <div className="absolute top-0 left-0 w-full h-full z-10 gradientProject "></div>
           <Image
+            alt="MNMAL"
             src={mnmalPic}
             layout="fill"
             objectFit="cover"
@@ -105,6 +106,7 @@ function Mnmal() {
           </div>
           <div className="my-12 col-span-full ">
             <Image
+              alt="cover"
               src={img1}
               className="rounded-xl border-2 border-secondary"
               layout="responsive"
@@ -128,6 +130,7 @@ function Mnmal() {
           <div className="mt-12 grid grid-flow-row auto-rows-max grid-cols-4 gap-5 col-span-full ">
             <div className=" col-span-2 xs-max:col-span-full">
               <Image
+                alt=""
                 className="rounded-xl border-2 border-secondary"
                 src={img2_1}
                 layout="responsive"
@@ -136,6 +139,7 @@ function Mnmal() {
             </div>
             <div className=" col-span-2 xs-max:col-span-full">
               <Image
+                alt=""
                 src={img2_2}
                 className="rounded-xl border-2 border-secondary"
                 layout="responsive"
@@ -145,6 +149,7 @@ function Mnmal() {
           </div>
           <div className="col-span-full ">
             <Image
+              alt=""
               src={img2_3}
               className="rounded-xl border-2 border-secondary"
               layout="responsive"
@@ -154,6 +159,7 @@ function Mnmal() {
           <div className="mt-12 grid grid-flow-row auto-rows-max grid-cols-4 gap-5 col-span-full ">
             <div className=" col-span-2 xs-max:col-span-full">
               <Image
+                alt=""
                 className="rounded-xl border-2 border-secondary"
                 src={img3_1}
                 layout="responsive"
@@ -162,6 +168,7 @@ function Mnmal() {
             </div>
             <div className=" col-span-2 xs-max:col-span-full">
               <Image
+                alt=""
                 src={img3_2}
                 className="rounded-xl border-2 border-secondary"
                 layout="responsive"
@@ -172,6 +179,7 @@ function Mnmal() {
           <div className="grid grid-flow-row auto-rows-max grid-cols-4 gap-5 col-span-full ">
             <div className=" col-span-2 xs-max:col-span-full">
               <Image
+                alt=""
                 className="rounded-xl border-2 border-secondary"
                 src={img3_3}
                 layout="responsive"
@@ -180,6 +188,7 @@ function Mnmal() {
             </div>
             <div className=" col-span-2 xs-max:col-span-full">
               <Image
+                alt=""
                 src={img3_4}
                 className="rounded-xl border-2 border-secondary"
                 layout="responsive"
@@ -221,7 +230,7 @@ function Mnmal() {
                 href="mailto:kontakt@adamh.de"
                 className="flex xs-max:ml-0 xs-max:mt-2 ml-4"
               >
-                <Image src={send} />
+                <Image alt="" src={send} />
                 <h3 className="font-semi-bold text-lg text-accent ml-2">
                   Send a Message
                 </h3>

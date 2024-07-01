@@ -41,6 +41,7 @@ function Selvportrait() {
           {/* image overlay from top to bottom black */}
           <div className="absolute top-0 left-0 w-full h-full z-10 gradientProject "></div>
           <Image
+            alt="Selvportrait"
             src={selvPic}
             className=" grayscale"
             layout="fill"
@@ -167,7 +168,7 @@ function Selvportrait() {
                 href="mailto:kontakt@adamh.de"
                 className="flex xs-max:ml-0 xs-max:mt-2 ml-4"
               >
-                <Image src={send} />
+                <Image alt="send" src={send} />
                 <h3 className="font-semi-bold text-lg text-accent ml-2">
                   Send a Message
                 </h3>

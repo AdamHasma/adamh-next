@@ -6,7 +6,7 @@ import Image from "next/image";
 
 import { useState, useRef, useEffect } from "react";
 
-import portrait from "../assets/images/portrait.jpg";
+import portrait from "../assets/images/portrait.webp";
 import Cv from "../assets/images/cv.jsx";
 import Linkedin from "../assets/images/in.jsx";
 import Insta from "../assets/images/insta.jsx";
@@ -22,7 +22,7 @@ import webdev from "../assets/images/webdev.svg";
 import { on } from "events";
 
 const socials = [
-  { icon: Insta, link: "https://www.instagram.com/adam.hasma/" },
+  { icon: Insta, link: "https://www.instagram.com/adamh_webdesign/" },
   { icon: Be, link: "https://www.behance.net/adamhasma/" },
   {
     icon: Linkedin,
@@ -112,7 +112,7 @@ function About() {
           </p>
           <h3 className="text-lg font-medium mt-6 semi-condensed uppercase">
             <span className="mr-2">
-              <Image src={experience} width="24" height="24" />
+              <Image alt="Experience" src={experience} width="24" height="24" />
             </span>
             Experience Design
           </h3>
@@ -125,7 +125,7 @@ function About() {
           </p>
           <h3 className="text-lg font-medium mt-6 semi-condensed uppercase">
             <span className="mr-2">
-              <Image src={webdev} width="24" height="24" />
+              <Image alt="Experience" src={webdev} width="24" height="24" />
             </span>
             Web Development
           </h3>
@@ -192,7 +192,7 @@ function About() {
               href="https://drive.google.com/file/d/1wTSq8ACQmEAE3C-L26YkyJKnRBLHpoaH/view?usp=sharing"
               className="flex xxs-max:ml-0 ml-4"
             >
-              <Image src={download} />
+              <Image alt="download cv" src={download} />
               <h3 className="font-semi-bold  xxs-max:mt-2 text-lg ml-2">
                 download full CV
               </h3>
@@ -214,13 +214,25 @@ function About() {
                   onClick={() => setLanguage(true)}
                   className="cursor-pointer h-fit leading-[0]"
                 >
-                  <Image layout="fixed" width={32} height={18} src={english} />
+                  <Image
+                    alt="english"
+                    layout="fixed"
+                    width={32}
+                    height={18}
+                    src={english}
+                  />
                 </div>
                 <div
                   onClick={() => setLanguage(false)}
                   className="cursor-pointer h-fit leading-[0] ml-4"
                 >
-                  <Image src={german} layout="fixed" width={32} height={18} />
+                  <Image
+                    alt="deutsch"
+                    src={german}
+                    layout="fixed"
+                    width={32}
+                    height={18}
+                  />
                 </div>
               </div>
             </div>
@@ -348,8 +360,11 @@ function About() {
                   By submitting the contact form, you agree that your data will
                   be used to process your request. (for further information and
                   revocation you will find in the{" "}
-                  <Link href="/privacyPolicy">
-                    <a className="underline cursor-pointer"> privacy policy</a>
+                  <Link
+                    className="underline cursor-pointer"
+                    href="/privacyPolicy"
+                  >
+                    privacy policy
                   </Link>
                   ).
                 </i>

@@ -42,6 +42,7 @@ function Needanime() {
           {/* image overlay from top to bottom black */}
           <div className="absolute top-0 left-0 w-full h-full z-10 gradientProject "></div>
           <Image
+            alt=""
             src={needanimePic}
             className=" grayscale"
             layout="fill"
@@ -102,6 +103,7 @@ function Needanime() {
           </div>
           <div className="my-12 col-span-full border-2 border-secondary rounded-xl">
             <Image
+              alt=""
               src={img1}
               height={700}
               className="rounded-xl border-2 border-secondary"
@@ -139,6 +141,7 @@ function Needanime() {
           </div>
           <div className="col-span-full rounded-xl border-2 border-secondary">
             <Image
+              alt=""
               src={img2}
               className="rounded-xl border-2 border-secondary"
               layout="responsive"
@@ -181,7 +184,7 @@ function Needanime() {
                 href="mailto:kontakt@adamh.de"
                 className="flex xs-max:ml-0 xs-max:mt-2 ml-4"
               >
-                <Image src={send} />
+                <Image alt="send" src={send} />
                 <h3 className="font-semi-bold text-lg text-accent ml-2">
                   Send a Message
                 </h3>

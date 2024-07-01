@@ -23,6 +23,7 @@ import mnmalPic from "../assets/images/mnmal/mnmalMobile.webp";
 import selvportrait from "../assets/images/selvportrait.jpg";
 import selvportraitPic from "../assets/images/selv/selvPic.webp";
 import defaultPic from "../assets/images/default.png";
+import swipe from "../assets/images/swipe.webp";
 
 const projectData = [
   {
@@ -136,7 +137,7 @@ const IndexPage = () => {
                 <span className="text-accent">Good</span> Experience <br />
                 needs...
                 <div className="mt-4">
-                  <video
+                  {/*   <video
                     ref={swipeVideo}
                     className="m-auto relative right-2"
                     controls={false}
@@ -147,6 +148,14 @@ const IndexPage = () => {
                     preload="auto"
                     typeof="video/mp4"
                     src={require("../public/swipe.mp4").default}
+                  />
+*/}
+                  <Image
+                    className="m-auto relative right-2"
+                    objectFit="cover"
+                    src={swipe}
+                    alt="swipe"
+                    priority
                   />
                 </div>
               </h1>
@@ -191,8 +200,9 @@ const IndexPage = () => {
         </Swiper>
       </div>
       <div className="overflow-visible xxs-max:hidden flex flex-col col-span-8 tracking-[.5em] group transition-all duration-300">
-        <Link href="projects/mnmal">
+        <Link href="projects/mnmal" legacyBehavior>
           <a
+            href="projects/mnmal"
             onMouseEnter={(e: any) => {
               setBottomPic(mnmal);
               handleProjectInfo("mnmal");
@@ -208,7 +218,7 @@ const IndexPage = () => {
             MNMAL
           </a>
         </Link>
-        <Link href="projects/needanime">
+        <Link href="projects/needanime" legacyBehavior>
           <a
             onMouseEnter={() => {
               setBottomPic(needanime);
@@ -226,7 +236,7 @@ const IndexPage = () => {
             NEEDANI.ME
           </a>
         </Link>
-        <Link href="projects/selvportrait">
+        <Link href="projects/selvportrait" legacyBehavior>
           <a
             onMouseEnter={() => {
               setBottomPic(selvportrait);
@@ -271,6 +281,7 @@ const IndexPage = () => {
             layout="fill"
             objectFit="cover"
             priority
+            alt="cover"
           />
         </div>
       </div>

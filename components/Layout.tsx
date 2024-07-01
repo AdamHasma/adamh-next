@@ -42,7 +42,7 @@ const Layout = ({ children, title = "This is the default title" }: Props) => {
                   width={144}
                   layout="fixed"
                   src={logo}
-                  alt=""
+                  alt="Logo"
                 />
               </div>
             </Link>
@@ -52,15 +52,9 @@ const Layout = ({ children, title = "This is the default title" }: Props) => {
                 (openEye ? " flex" : " hidden")
               }
             >
-              <Link href="/projects/mnmal">
-                <a>MNMAL</a>
-              </Link>
-              <Link href="/projects/needanime">
-                <a>NEEDANI.ME</a>
-              </Link>
-              <Link href="/projects/selvportrait">
-                <a>SELVPORTRAIT</a>
-              </Link>
+              <Link href="/projects/mnmal">MNMAL</Link>
+              <Link href="/projects/needanime">NEEDANI.ME</Link>
+              <Link href="/projects/selvportrait">SELVPORTRAIT</Link>
             </div>
             <div className="flex bar text-lg condensed justify-between sm:col-end-[-1] sm-max:col-end-[-1] s-max:col-end-[-1] sm:col-span-3 sm-max:col-span-4 s-max:col-span-5 bg-primary border border-secondary border-opacity-25 rounded-xl px-5 pt-4 pb-3 xs-max:p-2 xs-max:justify-around shadow-primary shadow-nav-glow">
               <div
@@ -83,9 +77,7 @@ const Layout = ({ children, title = "This is the default title" }: Props) => {
                 <span className="pb-8 xs-max:hidden">Projects ↓</span>
                 <span className="xs-max:flex cursor-pointer hidden">
                   <Link href="https://adamh.de">
-                    <a className="before:content-none leading-[0]">
-                      <Image className="" src={ah}></Image>
-                    </a>
+                    <Image alt="Logo" className="" src={ah}></Image>
                   </Link>
                 </span>
 
@@ -93,22 +85,14 @@ const Layout = ({ children, title = "This is the default title" }: Props) => {
                   ref={projectsListRef}
                   className="hidden flex-col absolute top-14 left-0 z-10 projectlist "
                 >
-                  <Link href="/projects/mnmal">
-                    <a>MNMAL</a>
-                  </Link>
-                  <Link href="/projects/needanime">
-                    <a>NEEDANI.ME</a>
-                  </Link>
-                  <Link href="/projects/selvportrait">
-                    <a>SELVPORTRAIT</a>
-                  </Link>
+                  <Link href="/projects/mnmal">MNMAL</Link>
+                  <Link href="/projects/needanime">NEEDANI.ME</Link>
+                  <Link href="/projects/selvportrait">SELVPORTRAIT</Link>
                 </div>
               </div>
               {/* hidden Links that appear from top to bottom when hovered over projects. if mouse is outside of the parent div of projects, then hide them again */}
               <span className="flex xs-max:hidden">
-                <Link href="/about">
-                  <a>About Me →</a>
-                </Link>
+                <Link href="/about">About Me →</Link>
               </span>
               <span
                 onClick={() => setOpenEye(!openEye)}
@@ -124,15 +108,11 @@ const Layout = ({ children, title = "This is the default title" }: Props) => {
                 />
               </span>
               <span className="flex xs-max:hidden">
-                <Link href="mailto:kontakt@adamh.de">
-                  <a>Contact ↗</a>
-                </Link>
+                <Link href="mailto:kontakt@adamh.de">Contact ↗</Link>
               </span>
               <span className="xs-max:flex hidden cursor-pointer">
                 <Link href="/about">
-                  <a className="before:content-none leading-[0]">
-                    <Image className="" src={about}></Image>
-                  </a>
+                  <Image alt="About me" className="" src={about}></Image>
                 </Link>
               </span>
             </div>
@@ -144,12 +124,10 @@ const Layout = ({ children, title = "This is the default title" }: Props) => {
             Design and Dev <br className="hidden xxs-max:block" /> by Me
           </span>
           <div className="flex xs-max:justify-between xs-max:w-full">
-            <Link href="/legalNotice">
-              <a className="mr-4 xxs-max:mr-0">legal notice</a>
+            <Link className="mr-4 xxs-max:mr-0" href="/legalNotice">
+              legal notice
             </Link>
-            <Link href="/privacyPolicy">
-              <a>privacy policy</a>
-            </Link>
+            <Link href="/privacyPolicy">privacy policy</Link>
           </div>
         </footer>
       </div>
