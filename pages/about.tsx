@@ -212,7 +212,7 @@ function About() {
                 ></div>
                 <div
                   onClick={() => setLanguage(true)}
-                  className="cursor-pointer h-fit leading-[0]"
+                  className="cursor-pointer h-fit leading-[0] relative z-10"
                 >
                   <Image
                     alt="english"
@@ -224,7 +224,7 @@ function About() {
                 </div>
                 <div
                   onClick={() => setLanguage(false)}
-                  className="cursor-pointer h-fit leading-[0] ml-4"
+                  className="cursor-pointer h-fit leading-[0] ml-4 relative z-10"
                 >
                   <Image
                     alt="deutsch"
