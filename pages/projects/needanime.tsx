@@ -135,7 +135,7 @@ function Needanime() {
                 autoPlay={true}
                 loop={true}
                 muted={true}
-                src={require("../../public/3.mp4").default}
+                src="/3.mp4"
               />
             </div>
           </div>

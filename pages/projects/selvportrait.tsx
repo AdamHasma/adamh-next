@@ -105,7 +105,7 @@ function Selvportrait() {
               autoPlay={true}
               loop={true}
               muted={true}
-              src={require("../../assets/images/selv/1.mp4").default}
+              src="/1.mp4"
             />
           </div>
           <div className="grid grid-flow-row auto-rows-max grid-cols-6 gap-5 col-start-2 col-end-8 xs-max:grid-cols-8 xs-max:col-start-1 xs-max:col-end-9">
@@ -129,7 +129,7 @@ function Selvportrait() {
                 autoPlay={true}
                 loop={true}
                 muted={true}
-                src={require("../../assets/images/selv/2.mp4").default}
+                src="/2.mp4"
               />
             </div>
           </div>

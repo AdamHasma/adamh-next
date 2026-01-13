@@ -110,7 +110,7 @@ function About() {
             and web. Besides Design and Coding, I also like cats, even when they
             always sit on my keyboard.
           </p>
-          <h3 className="text-lg font-medium mt-6 semi-condensed uppercase">
+          <h3 className="text-lg font-medium mt-6 semi-condensed uppercase flex">
             <span className="mr-2">
               <Image alt="Experience" src={experience} width="24" height="24" />
             </span>
@@ -123,7 +123,7 @@ function About() {
             doesn&apos;t understand how to use it. I always try to make my
             designs as intuitive as possible.
           </p>
-          <h3 className="text-lg font-medium mt-6 semi-condensed uppercase">
+          <h3 className="text-lg font-medium mt-6 semi-condensed uppercase flex">
             <span className="mr-2">
               <Image alt="Experience" src={webdev} width="24" height="24" />
             </span>
