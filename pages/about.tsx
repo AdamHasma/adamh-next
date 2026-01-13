@@ -44,14 +44,14 @@ const webdevInfo = [
 // CV data with key value pairs of company, position, date
 const cvData = [
   {
-    company: "Montary Agency",
-    position: "Graphic Designer & Frontend Developer",
-    date: "2021 - Present",
-  },
-  {
     company: "Freelance",
     position: "Experience Designer & Frontend Developer",
     date: "2019 - Present",
+  },
+  {
+    company: "Montary Agency",
+    position: "Graphic Designer & Frontend Developer",
+    date: "2021 - 2025",
   },
   {
     company: "HAWK Hildesheim",
